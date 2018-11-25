@@ -22,7 +22,7 @@ $(SULLY): $(SULLY_SRC)
 
 clean:
 	rm -rf $(GRACE)_kid.c
-	rm -rf $(SULLY)_*
+	rm -rf $(shell find . -name "$(SULLY)_*")
 
 fclean: clean
 	rm -rf $(GRACE)
