@@ -17,10 +17,11 @@ $(COLLEEN): $(COLLEEN_SRC)
 
 $(GRACE): $(GRACE_SRC)
 	nasm $(NASM_FLAGS) $(GRACE_SRC) -o $(GRACE_OBJ)
-	ld $(LD_FLAGS) $(GRACE_OBJ) $(GRACE)
+	ld $(LD_FLAGS) $(GRACE_OBJ) -o $(GRACE)
 
 clean:
-	rm -rf $(GRACE)_kid.c
+	rm -rf $(GRACE)_kid.s
+	rm -rf $(GRACE_OBJ)
 	rm -rf $(COLLEEN_OBJ)
 
 fclean: clean
