@@ -10,7 +10,7 @@ SULLY = Sully
 SULLY_SRC = Sully.s
 SULLY_OBJ = Sully.o
 
-NASM_FLAGS = -f macho
+NASM_FLAGS = -f macho64
 LD_FLAGS = -macosx_version_min 10.8 -lSystem
 
 all: $(COLLEEN) $(GRACE) $(SULLY)
